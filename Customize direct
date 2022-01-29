@@ -1,0 +1,9 @@
+# Customize direct
+DOMAIN-SUFFIX,fast.airport-gov-cn.com
+PROCESS-NAME,/Applications/Thunder.app/Contents/XPCServices/DownloadService.xpc/Contents/MacOS/DownloadService
+DOMAIN-SUFFIX,storage.live.com
+DOMAIN-SUFFIX,officecdn-microsoft-com.akamaized.net
+DOMAIN-SUFFIX,locationlookup.istatmenus.app
+DOMAIN-SUFFIX,weather.istatmenus.app
+DOMAIN-SUFFIX,weather.bjango.com
+DOMAIN-SUFFIX,192.168.37.249
