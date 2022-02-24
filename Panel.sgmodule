@@ -9,9 +9,6 @@ net-info-panel=title="网络状态",content="请刷新",style=info,script-name=n
 # 刷新DNS
 flushDNS = script-name=flushDNS,update-interval=600
 
-# 机场信息
-#Sub_info = script-name=Sub_info
-
 [Script]
 
 # 网络信息面板
@@ -19,6 +16,3 @@ net-info-panel= type=generic,script-path=https://raw.githubusercontent.com/Peng-
 
 # 刷新DNS
 flushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js
-
-# 机场信息
-#Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fs1.subbitznet.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D79a57de1b9c76ed6f680b4e37ff58817&reset_day=1&title=AmyInfo&icon=bonjour&color=#007aff
