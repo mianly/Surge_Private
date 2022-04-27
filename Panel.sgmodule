@@ -1,10 +1,10 @@
-#!name=信息面板
+#!name=自用信息面板
 #!desc=v4.27
 
 [Script]
-Sub_info = type=generic,timeout=10,script-path=https://gist.githubusercontent.com/mianly/357966426771c27eea6482db898029b3/raw/0709eebb5685b4f1448722cd232ad3b542323e5c/sub_info.js ,script-update-interval=0,argument=url=https%3A%2F%2Fs1.subbitznet.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D79a57de1b9c76ed6f680b4e37ff58817&reset_day=23&title=BitzNet&icon=bitcoinsign.square.fill&color=#4cb3cd
-Plane_info = type=generic,timeout=10,script-path=https://gist.githubusercontent.com/mianly/357966426771c27eea6482db898029b3/raw/0709eebb5685b4f1448722cd232ad3b542323e5c/sub_info.js ,script-update-interval=0,argument=url=https%3A%2F%2Ftexon.io%2Fportal%2Fsubscribe%2F902%2FYR8xEHJxqVB%2Fsurge%2F&reset_day=25&title=Texon&icon=tengesign.square.fill&color=#666699
-stream-all = type=generic, timeout=15, script-path=https://gist.githubusercontent.com/mianly/f10188136a0abde5b8ae0456a6ba427a/raw/c2d0386405cc9f8c2d5dcb68ab18d582b3ba9fae/stream-check.js
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mianly/Surge_Private/main/sub_info.js ,script-update-interval=0,argument=url=https%3A%2F%2Fs1.subbitznet.com%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D79a57de1b9c76ed6f680b4e37ff58817&reset_day=23&title=BitzNet&icon=bitcoinsign.square.fill&color=#4cb3cd
+Plane_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mianly/Surge_Private/main/sub_info.js ,script-update-interval=0,argument=url=https%3A%2F%2Ftexon.io%2Fportal%2Fsubscribe%2F902%2FYR8xEHJxqVB%2Fsurge%2F&reset_day=25&title=Texon&icon=tengesign.square.fill&color=#666699
+stream-all = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/mianly/Surge_Private/main/stream-check.js
 
 [Panel]
 Sub_info = script-name=Sub_info,update-interval=3600
