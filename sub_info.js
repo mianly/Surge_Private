@@ -56,7 +56,7 @@ let args = getArgs();
 
   $done({
     title: `${args.title} | ${hour}:${minutes}`,
-    content: `${bytesToSize(total-used)} | ${resetDayLeft}天🔙 | ${formatTime(expire)}🔚`,
+    content: `${bytesToSize(total-used)} | ${resetDayLeft}天 | ${formatTime(expire)}`,
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
   });
@@ -144,5 +144,5 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return year + month + day ;
+  return year + "年" + month+ “月” + day+ “日” ;
 }
