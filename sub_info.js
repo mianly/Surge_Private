@@ -141,7 +141,7 @@ function bytesToSize(bytes) {
 
 function formatTime(time) {
   let dateObj = new Date(time);
-  let year = dateObj.getFullYear();
+  let year = dateObj.getYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
   return year + "年" + month + "月" + day + "日";
