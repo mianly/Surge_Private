@@ -21,7 +21,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
   ;(async () => {
     let panel_result = {
       title: 'Streaming check',
-      content: [`${disney_result}`],
+      content: '',
       icon: 'play.square.fill',
       'icon-color': '#e50a15',
     }
