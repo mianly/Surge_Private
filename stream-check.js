@@ -151,7 +151,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += 'has been totally unlock in ' + code.toUpperCase()
+        netflix_check_result += 'has been unlock in ' + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
