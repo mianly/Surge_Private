@@ -30,7 +30,7 @@ let args = getArgs();
   let content = [`用量：${bytesToSize(used)} | ${bytesToSize(total)}`];
 
   if (resetDayLeft) {
-    content.push(`重置：剩余${resetDayLeft} Days`);
+    content.push(`重置：剩余${resetDayLeft}+ " " +Days`);
   }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
@@ -45,7 +45,7 @@ let args = getArgs();
 
   $done({
     title: `${args.title} | Ex：${formatTime(expire)}`,
-    content: `Avl：${bytesToSize(total-used)} | Re：${resetDayLeft} Days`,
+    content: `Avl：${bytesToSize(total-used)} | Re：${resetDayLeft}+ " " +Days`,
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
   });
