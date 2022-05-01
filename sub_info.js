@@ -45,7 +45,7 @@ let args = getArgs();
 
   $done({
     title: `${args.title} | Ex：${formatTime(expire)}`,
-    content: `Avl：${bytesToSize(total-used)} | Re：${resetDayLeft}Days `,
+    content: `Avl：${bytesToSize(total-used)} | Re：${resetDayLeft}Days`,
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
   });
