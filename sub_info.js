@@ -44,8 +44,8 @@ let args = getArgs();
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} | ${hour}:${minutes}`,
-    content: `${bytesToSize(total-used)} | ${resetDayLeft}天 | ${formatTime(expire)}`,
+    title: `${args.title} | Ex：${formatTime(expire)}`,
+    content: `Avl：${bytesToSize(total-used)} | Re：${resetDayLeft}天 `,
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
   });
