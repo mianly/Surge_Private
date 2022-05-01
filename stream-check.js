@@ -36,7 +36,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="Disney+ unlock on " + region.toUpperCase()
+        disney_result="Disney+ unlock in " + region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
@@ -95,7 +95,7 @@ panel_result['content'] = content
         if (code === 'Not Available') {
           youtube_check_result += 'unsupported'
         } else {
-          youtube_check_result += 'unlock on ' + code.toUpperCase()
+          youtube_check_result += 'unlock in ' + code.toUpperCase()
         }
       })
       .catch((error) => {
@@ -151,7 +151,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += 'totally unlock on ' + code.toUpperCase()
+        netflix_check_result += 'totally unlock in ' + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
@@ -159,7 +159,7 @@ panel_result['content'] = content
           return Promise.reject('Not Available')
         }
   
-        netflix_check_result += 'only unlock Self-made drama on ' + code.toUpperCase()
+        netflix_check_result += 'only unlock self-made drama in ' + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .catch((error) => {
