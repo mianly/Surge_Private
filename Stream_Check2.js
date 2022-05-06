@@ -59,13 +59,13 @@ async function check_youtube_premium() {
   await inner_check()
     .then((code) => {
       if (code === 'Not Available') {
-        youtube_check_result += 'YouTube Not Available'
+        youtube_check_result += 'YT Not Available'
       } else {
-        youtube_check_result += 'YouTube Unlock ➟ ' + code.toUpperCase()
+        youtube_check_result += 'YT Unlock ➟ ' + code.toUpperCase()
       }
     })
     .catch((error) => {
-      youtube_check_result += 'YouTube Timeout'
+      youtube_check_result += 'YT Timeout'
     })
 
   return youtube_check_result
