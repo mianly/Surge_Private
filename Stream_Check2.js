@@ -59,13 +59,13 @@ async function check_youtube_premium() {
   await inner_check()
     .then((code) => {
       if (code === 'Not Available') {
-        youtube_check_result += 'YT Not Available'
+        youtube_check_result += 'YT ☒'
       } else {
-        youtube_check_result += 'YT Unlock ➟ ' + code.toUpperCase()
+        youtube_check_result += 'YT ☑ ➟ ' + code.toUpperCase()
       }
     })
     .catch((error) => {
-      youtube_check_result += 'YT Timeout'
+      youtube_check_result += 'YT ➟ ↻'
     })
 
   return youtube_check_result
@@ -117,15 +117,15 @@ async function check_netflix() {
       if (code === 'Not Found') {
         return inner_check(80018499)
       }
-      netflix_check_result += 'NF Unlock ➟ ' + code.toUpperCase()
+      netflix_check_result += 'NF ☑ ➟ ' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
       if (code === 'Not Found') {
-        return Promise.reject('NF Not Available')
+        return Promise.reject('NF ☒')
       }
 
-      netflix_check_result += 'NF Partial Unlock ➟ ' + code.toUpperCase()
+      netflix_check_result += 'NF ⚠️ ➟ ' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
@@ -133,10 +133,10 @@ async function check_netflix() {
         return
       }
       if (error === 'Not Available') {
-        netflix_check_result += 'NF Not Available'
+        netflix_check_result += 'NF ☒'
         return
       }
-      netflix_check_result += 'NF Timeout'
+      netflix_check_result += 'NF ➟ ↻'
     })
 
   return netflix_check_result
