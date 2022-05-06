@@ -12,9 +12,9 @@ const REQUEST_HEADERS = {
     'icon-color': '#e50a15',
   }
   await Promise.all([check_netflix(), check_youtube_premium()])
-    await Promise.all([check_netflix()])  
+    await Promise.all([testDisneyPlus()])  
     .then((result) => {
-      let content = result.join(' ｜ ')
+      let content = result.join('   ')
       panel_result['content'] = content
     })
     .finally(() => {
