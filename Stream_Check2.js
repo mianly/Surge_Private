@@ -13,7 +13,7 @@ const REQUEST_HEADERS = {
   }
   await Promise.all([check_netflix(), check_youtube_premium()])
     .then((result) => {
-      let content = result.join('   ')
+      let content = result.join(' ｜ ')
       panel_result['content'] = content
     })
     .finally(() => {
