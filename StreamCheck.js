@@ -13,14 +13,8 @@ const REQUEST_HEADERS = {
   }
   await Promise.all([check_netflix(), check_youtube_premium()])
     await Promise.all([testDisneyPlus()])  
-    .then((result) => {
-      let content = result.join('   ')
-      panel_result['content'] = content
-    })
-    .finally(() => {
-      $done(panel_result)
-    })
-})()
+      .then((result) => { 
+         console.log(result)
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
@@ -37,6 +31,16 @@ const REQUEST_HEADERS = {
         disney_result="Disney+  ➟  ↻"
       }
 result.push(disney_result)
+console.log(result)
+        let content = result.join(' ｜ ')
+        console.log(content)
+     
+panel_result['content'] = content
+      })
+      .finally(() => {
+        $done(panel_result)
+      })
+  })()
 
 async function check_youtube_premium() {
   let inner_check = () => {
