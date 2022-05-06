@@ -6,10 +6,10 @@ const REQUEST_HEADERS = {
 
 ;(async () => {
   let panel_result = {
-    title: '𝗦𝗧𝗥𝗘𝗔𝗠 𝗖𝗛𝗘𝗖𝗞',
+    title: 'Streaming Check',
     content: '',
-    icon: 'play.circle',
-    'icon-color': '#00BC12',
+    icon: 'play.square.fill',
+    'icon-color': '#e50a15',
   }
   await Promise.all([check_netflix(), check_youtube_premium()])
     .then((result) => {
@@ -59,13 +59,13 @@ async function check_youtube_premium() {
   await inner_check()
     .then((code) => {
       if (code === 'Not Available') {
-        youtube_check_result += '油管未解锁'
+        youtube_check_result += 'YouTube Not Available'
       } else {
-        youtube_check_result += '油管解锁 ➟ ' + code.toUpperCase()
+        youtube_check_result += 'YouTube Unlock ➟ ' + code.toUpperCase()
       }
     })
     .catch((error) => {
-      youtube_check_result += '检测失败'
+      youtube_check_result += 'YouTube Timeout'
     })
 
   return youtube_check_result
@@ -117,15 +117,15 @@ async function check_netflix() {
       if (code === 'Not Found') {
         return inner_check(80018499)
       }
-      netflix_check_result += '奈飞解锁 ➟ ' + code.toUpperCase()
+      netflix_check_result += 'NF Unlock ➟ ' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .then((code) => {
       if (code === 'Not Found') {
-        return Promise.reject('Not Available')
+        return Promise.reject('NF Not Available')
       }
 
-      netflix_check_result += '奈飞自制 ➟ ' + code.toUpperCase()
+      netflix_check_result += 'NF Partial Unlock ➟ ' + code.toUpperCase()
       return Promise.reject('BreakSignal')
     })
     .catch((error) => {
@@ -133,10 +133,10 @@ async function check_netflix() {
         return
       }
       if (error === 'Not Available') {
-        netflix_check_result += '奈飞无法观看'
+        netflix_check_result += 'NF Not Available'
         return
       }
-      netflix_check_result += '检测失败'
+      netflix_check_result += 'NF Timeout'
     })
 
   return netflix_check_result
