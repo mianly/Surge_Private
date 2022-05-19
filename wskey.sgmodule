@@ -1,0 +1,8 @@
+#!name= JD wskey
+#!desc= JD wskey
+
+[Script]
+http-request ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(genToken|serverConfig)$ script-path=https://raw.githubusercontent.com/chiupam/surge/main/scripts/wskey.js, requires-body=true, timeout=120, tag=京东获取wskey
+
+[Mitm]
+hostname = %APPEND% api.m.jd.com
